@@ -1,19 +1,22 @@
-"use client"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Download, Mail, Github, Linkedin, ChevronDown } from "lucide-react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { TypeAnimation } from "@/components/type-animation"
-import { FloatingElement } from "@/components/floating-element"
-import Image from "next/image"
+"use client";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Download, Mail, Github, Linkedin, ChevronDown } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { TypeAnimation } from "@/components/type-animation";
+import { FloatingElement } from "@/components/floating-element";
+import Image from "next/image";
 
-export function AnimatedHero({children}: {children: React.ReactNode}) {
-  const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
+export function AnimatedHero({ children }: { children: React.ReactNode }) {
+  const { scrollYProgress } = useScroll();
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
 
   return (
-    <motion.section style={{ opacity, scale }} className="w-full py-12 md:py-18 relative overflow-hidden">
+    <motion.section
+      style={{ opacity, scale }}
+      className="w-full py-12 md:py-18 relative overflow-hidden"
+    >
       <FloatingElement
         className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/10 blur-xl"
         xFactor={15}
@@ -46,11 +49,18 @@ export function AnimatedHero({children}: {children: React.ReactNode}) {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-col gap-3 min-[400px]:flex-row pt-2"
             >
-              <Button className="gap-1 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/80 hover:to-purple-600/80">
-                <Mail className="h-4 w-4" />
-                Contact Me
-              </Button>
-              <Link href="/data/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="#contact">
+                <Button className="gap-1 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/80 hover:to-purple-600/80">
+                  <Mail className="h-4 w-4" />
+                  Contact Me
+                </Button>
+              </Link>
+
+              <Link
+                href="/data/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button variant="outline" className="gap-1">
                   <Download className="h-4 w-4" />
                   Download CV
@@ -63,7 +73,11 @@ export function AnimatedHero({children}: {children: React.ReactNode}) {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="flex gap-4 pt-2"
             >
-              <Link href="https://github.com/truongSonD97" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/truongSonD97"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="ghost"
                   size="icon"
@@ -73,7 +87,11 @@ export function AnimatedHero({children}: {children: React.ReactNode}) {
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/truongsonvo/" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.linkedin.com/in/truongsonvo/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="ghost"
                   size="icon"
@@ -106,9 +124,8 @@ export function AnimatedHero({children}: {children: React.ReactNode}) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="flex justify-center mt-12"
-        >
-        </motion.div>
+        ></motion.div>
       </div>
     </motion.section>
-  )
+  );
 }
