@@ -1,6 +1,9 @@
 // app/actions/send-email.ts
 'use server'
 
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+
 export async function sendEmail(prevState: any, formData: FormData) {
   const rawFormData = {
     name: formData.get('name'),
@@ -10,7 +13,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
     message: formData.get('message'),
   }
 
-  const res = await fetch('/api/send-email', {
+  const res = await fetch(`${baseUrl}/api/send-email`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(rawFormData),
