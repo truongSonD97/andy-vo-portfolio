@@ -23,7 +23,7 @@ export const metadata = {
   description:
     "Passionate software engineer with 6+ years of experience crafting responsive front-end interfaces and building robust back-end systems using modern frameworks like React, Next.js, NestJS, and Express. View my portfolio of projects and experience.",
   keywords:
-    "software engineer, web developer, React, Next.js, TypeScript, portfolio",
+    "software engineer, web developer, React, Next.js, TypeScript, portfolio, micro-frontends, Nodejs",
   openGraph: {
     title: "Andy Vo - Senior Software Engineer",
     description:
@@ -98,7 +98,7 @@ export default function Home() {
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Full-stack Software Engineer with 6 years of front-end and 4
                   years of back-end experience, specializing in scalable,
-                  responsive web applications. Skilled in React, Next.js, Redux,
+                  responsive web applications. Skilled in React, Next.js, Redux, Micro-frontends,
                   NestJS, and Express, Microservices, with strong database
                   knowledge (PostgreSQL, MySQL, MongoDB). Passionate about
                   performance optimization, API integration, and delivering
@@ -162,6 +162,7 @@ export default function Home() {
                       <Badge>Tailwind CSS</Badge>
                       <Badge>Redux</Badge>
                       <Badge>Zustand</Badge>
+                      <Badge>Micro-frontends</Badge>
                     </div>
                   </CardContent>
                 </Card>

@@ -24,9 +24,14 @@ export default function ContactForm() {
     }
   }, [state]);
 
+  const handleSubmit = async () => {
+      window.location.href ="http://localhost:3013/api/v1/auth/social/google/login?callback=http%3A%2F%2Flocalhost%3A3000"
+  };
+
   return (
     <AnimatedContact>
       <div className="w-full max-w-md space-y-2 ml-auto mr-auto">
+        <Button onClick={handleSubmit}>Test</Button>
         <form
           action={(formData) => {
             if (isPending) return; // prevent double submit
