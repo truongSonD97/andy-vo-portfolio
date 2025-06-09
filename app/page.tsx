@@ -69,7 +69,7 @@ export default function Home() {
               </p>
             </div>
             <div className="space-y-4 text-gray-500 dark:text-gray-400">
-              <div className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 h-[80px] md:h-[60px] lg:h-fit">
+              <div className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 lg:h-fit">
                 <span className="inline">
                   Passionate software engineer with 6+ years of experience
                   crafting responsive front-end interfaces and building robust
